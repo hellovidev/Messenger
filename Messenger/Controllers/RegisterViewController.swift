@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
                     return
                 }
                 print("Account with \(user.email!) created")
-                self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
+                self.performSegue(withIdentifier: K.registerSegue, sender: self)
             }
         }
     }

@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
                   }
                 }
                 
-                self?.performSegue(withIdentifier: Constants.loginSegue, sender: self)
+                self?.performSegue(withIdentifier: K.loginSegue, sender: self)
             }
         }
     }
