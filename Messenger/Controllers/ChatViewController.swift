@@ -16,6 +16,8 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Chat"
+        navigationItem.hidesBackButton = true
         
     }
     
@@ -26,7 +28,7 @@ class ChatViewController: UIViewController {
     @IBAction func logoutAction(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
-            navigationController?.popViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

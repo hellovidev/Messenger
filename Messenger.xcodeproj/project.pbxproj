@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		866AAAA82618E141D87966B6 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10964CF9E4F08AAA066F9247 /* Pods_Messenger.framework */; };
 		98176F11267C8693009B3B47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98176F10267C8693009B3B47 /* GoogleService-Info.plist */; };
+		98176F13267CA53E009B3B47 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98176F12267CA53E009B3B47 /* Constants.swift */; };
 		98A196B1267B232300A4E694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A196B0267B232300A4E694 /* AppDelegate.swift */; };
 		98A196B3267B232300A4E694 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A196B2267B232300A4E694 /* SceneDelegate.swift */; };
 		98A196B8267B232300A4E694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A196B6267B232300A4E694 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		10964CF9E4F08AAA066F9247 /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98176F10267C8693009B3B47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98176F12267CA53E009B3B47 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		98A196AD267B232300A4E694 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A196B0267B232300A4E694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98A196B2267B232300A4E694 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				98A196B9267B232500A4E694 /* Assets.xcassets */,
 				98A196BE267B232500A4E694 /* Info.plist */,
 				98176F10267C8693009B3B47 /* GoogleService-Info.plist */,
+				98176F12267CA53E009B3B47 /* Constants.swift */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				98A196B1267B232300A4E694 /* AppDelegate.swift in Sources */,
 				98A196CE267B241A00A4E694 /* ChatViewController.swift in Sources */,
 				98A196CD267B241A00A4E694 /* RegisterViewController.swift in Sources */,
+				98176F13267CA53E009B3B47 /* Constants.swift in Sources */,
 				98A196CC267B241A00A4E694 /* LoginViewController.swift in Sources */,
 				98A196B3267B232300A4E694 /* SceneDelegate.swift in Sources */,
 			);
