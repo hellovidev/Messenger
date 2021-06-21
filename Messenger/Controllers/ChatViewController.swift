@@ -39,6 +39,9 @@ class ChatViewController: UIViewController {
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
                     print("Document added with ID: \(ref!.documentID)")
                 }
             }
@@ -58,6 +61,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath.init(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -75,7 +80,6 @@ class ChatViewController: UIViewController {
         }
     }
     
-    
 }
 
 extension ChatViewController: UITableViewDataSource {
@@ -84,9 +88,23 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row].body
+        let user = self.messages[indexPath.row].sender
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        if indexPath.count > 0 {
-            cell.messageLabel.text = messages[indexPath.row].body
+        cell.messageLabel.text = message
+
+        if let currentUser = Auth.auth().currentUser?.email {
+            if user == currentUser {
+                cell.senderAvatarImage.isHidden = true
+                cell.avatarImage.isHidden = false
+                cell.messageBubble.backgroundColor = .cyan
+                cell.messageLabel.textColor = .black
+            } else {
+                cell.senderAvatarImage.isHidden = false
+                cell.avatarImage.isHidden = true
+                cell.messageBubble.backgroundColor = .purple
+                cell.messageLabel.textColor = .white
+            }
         }
         return cell
     }
